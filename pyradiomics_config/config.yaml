@@ -1,0 +1,28 @@
+imageType:
+  Original: {}
+  LBP3D:
+    lbp3DIcosphereRadius : 2.
+  LoG:
+    sigma: [0.9765625]
+  Gradient: {}
+  Exponential: {}
+  Wavelet: {}
+  Square: {}
+  SquareRoot: {}
+  Logarithm: {}
+
+
+featureClass:
+  firstorder:
+  shape:
+  glcm:
+  glrlm:
+  glszm:
+  gldm:
+  ngtdm:
+
+setting:
+  resampledPixelSpacing: [0.9765625, 0.9765625, 0.9765625] # Isometric mode of spacing
+  binWidth: 0.5 # Fine tunned based on the recommendation of requiring around 30 to 150 bins
+  preCrop: True
+  padDistance: 4
