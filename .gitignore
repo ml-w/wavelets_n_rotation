@@ -1,0 +1,7 @@
+.devcontainer
+.github
+.idea
+.vscode
+*egg-info
+__pycache__
+build
