@@ -1,3 +1,4 @@
+
 # Info
 
 This folder contain the juptyer notebooks used in this study. There are four notebooks in total which was setup based on their purpose.
@@ -19,7 +20,6 @@ This folder contain the juptyer notebooks used in this study. There are four not
     - [Usage](#usage-4)
   - [\[3\] Performance-level analysis](#3-performance-level-analysis)
 
-
 # Setting up environment
 
 A `Dockerfile` is prepared to build a docker image for running the code. To build an image, you can use the command:
@@ -34,11 +34,15 @@ Test the function of the package by going into `src/tests` and run `pytest`:
 pytest .
 ```
 
-You should excpect all test to pass. 
+You should expect all test to pass.
+
+# Package
+
+A package `feature_robustness_analysis` was implemented for this project. The package is minimal and contains only several functions that is reused within the notebook. If you use the docker, this package would be already installed. Otherwise, you can install this package manually using `pip install -e .` within the directory where `setup.py` is. You will also need to install the requirements that are listed in `env.yaml` corresponding to the use of PyRadiomics v3.1.0.
 
 # Notebooks
 
-The code used in this study are provided with the package `feature_robustness_analysis` as well as in the jupyter notebook under `notebooks`. Note that the notebooks depend on the `feature_robustness_analysis` package and you are advised to use the dockerfile to create the environment for testing. 
+The code used in this study are provided with the package `feature_robustness_analysis` as well as in the jupyter notebook under `notebooks`. Note that the notebooks depend on the `feature_robustness_analysis` packageand you are advised to use the dockerfile to create the environment for testing.
 
 There are 4 notebooks corresponding to different major part of the study:
 
@@ -150,7 +154,6 @@ identify_trend_from_df(df)
 
 This notebook and code package can be run within the docker container build with the give Docker file.
 
-
 ## [2] Model training and testing
 
 The jupyter notebook [`2_model_training.ipynb`](notebooks/2_model_training.ipynb) contains the code implementation of the radiomic pipeline, repeated multiple times in a 5-fold cross-validation fashion.
@@ -161,6 +164,6 @@ This notebook can be run with the docker container created using the docker file
 
 ## [3] Performance-level analysis
 
-The jupyter notebook [`3_performance_analysis.ipynb`](notebooks/3_performance_analysis.ipynb) contains the code implementation for the performance analysis. 
+The jupyter notebook [`3_performance_analysis.ipynb`](notebooks/3_performance_analysis.ipynb) contains the code implementation for the performance analysis.
 
-This notebook requires SPSS to be installed and running inorder for the code to run correctly. This is a limitation of the SPSS-python API provided by IBM. There are more description about how the interface can be used. 
+This notebook requires SPSS to be installed and running inorder for the code to run correctly. This is a limitation of the SPSS-python API provided by IBM. There are more description about how the interface can be used.
